@@ -50,3 +50,6 @@ Text Domain: Perfect Site
     font-weight: 400;
   }
   
+  #top-navigation{
+    background-color: var(--color-cream);
+  }
