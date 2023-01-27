@@ -12,7 +12,7 @@
     </head>
     <body>-->
 
-    <?
+<?
 get_header();
 //This is a wordpress function that looks for a a header.php file in the root of your theme file.
 
@@ -21,11 +21,12 @@ get_header();
 ?>
 
 <main>
-  <section>
-<h1>Read your Semantic notes and plan out what each section will be</h1>
-<p>Don't just have a bunch of divs, <a href="https://www.w3schools.com/html/html5_semantic_elements.asp">use these</a> .</p>
-</section>
+    <section>
+        <h1></h1>
+        <p>Don't just have a bunch of divs, <a href="https://www.w3schools.com/html/html5_semantic_elements.asp">use
+                these</a> .</p>
+    </section>
 </main>
-      <!--  <script type="text/javascript" src="newjavascript.js"></script> -->
-    </body>
-    </html>
+
+<?
+get_footer();

@@ -34,6 +34,8 @@ if ( ! function_exists( 'buonviaggio_setup' ) ) :
 		 */
 		load_theme_textdomain( 'buonviaggio', get_template_directory() . '/languages' );
 
+        wp_enqueue_style( 'theme-style', get_stylesheet_uri() );
+
 		/**
 		 * Add default posts and comments RSS feed links to <head>.
 		 */

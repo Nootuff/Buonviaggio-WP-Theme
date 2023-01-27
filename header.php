@@ -42,7 +42,7 @@ $description = get_bloginfo('description', 'display');
 
 <body <?php body_class(); ?>>
 
-  <div id="top-navigation">
+  <nav id="top-navigation">
 
 
     <?php
@@ -67,4 +67,4 @@ $description = get_bloginfo('description', 'display');
     }
     ?>
 
-  </div>
+  </nav>
