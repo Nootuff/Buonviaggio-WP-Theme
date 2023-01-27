@@ -20,10 +20,10 @@ Text Domain: Perfect Site
       Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
       Segoe UI Emoji, Segoe UI Symbol;
     --font-size: 18px;
-    --color-green: #27ae60;
-    --color-yellow: #ffda00;
-    --color-red: #ef1f22;
-    --color-pink: #f50057;
+    --color-cream: rgb(255,234,192);
+    --color-orange: rgb(232,116,58);
+    --color-green: rgb(35,86,53);
+    --color-pink: rgb(255,0,0);
     --color-dark: #333;
     --color-light: #f2f2f2;
     --transition-dur: 0.3s;

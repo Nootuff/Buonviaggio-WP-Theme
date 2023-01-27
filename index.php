@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
     
     
@@ -8,9 +8,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
        
-       <!-- <link rel="stylesheet" href="newcss.css"> -->
+
     </head>
-    <body>
+    <body>-->
+
+    <?
+get_header();
+//This is a wordpress function that looks for a a header.php file in the root of your theme file.
+
+//get_template_part('template-parts/banner', 'title');
+//Another wordpress function. It pulls in banner-title, note the way the title is pulled in, you can learn more about this function in the wordpress docs.
+?>
+
 <main>
   <section>
 <h1>Read your Semantic notes and plan out what each section will be</h1>
