@@ -22,9 +22,24 @@ get_header();
 
 <main>
     <section>
-        <h1></h1>
-        <p>Don't just have a bunch of divs, <a href="https://www.w3schools.com/html/html5_semantic_elements.asp">use
-                these</a> .</p>
+      
+    <?php
+
+/*if (have_posts()) { //If there are posts in the blog database...
+  while (have_posts()) { //While you still have posts in the database...
+
+    the_post(); //WP function, pulls each individual post's data from the loop.
+
+    get_template_part('template-parts/content', 'exerpt'); //the first argument is the 'slug', this line of code takes the html template from the content-exerpt file.
+
+  }
+  //b2W_pagination(); //This makes pagination appear at the end of the posts list
+} else {
+  get_template_part('template-parts/content', 'none');
+}*/
+
+?>
+
     </section>
 </main>
 
