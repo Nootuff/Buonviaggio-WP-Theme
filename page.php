@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package bootstrap2wordpress
+ * @package buonviaggio
  * @since 1.0
  */
 
@@ -12,9 +12,8 @@ get_header();
 get_template_part( 'template-parts/banner', 'title' );
 ?>
 
-<div class="content-area">
-  <div class="container">
-    <div class="row">
+<main >
+ 
 
       <?php
         // are there any posts in the DB?
@@ -31,7 +30,6 @@ get_template_part( 'template-parts/banner', 'title' );
               );
             }
       ?>
-      <div class="col-md-8 offset-md-2 col-sm-12 offset-sm-0 overflow-hidden">
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
           <?php
@@ -39,7 +37,6 @@ get_template_part( 'template-parts/banner', 'title' );
           ?>
 
         </article>
-      </div>
       <?php
           }
         } else {
@@ -47,9 +44,8 @@ get_template_part( 'template-parts/banner', 'title' );
         }
       ?>
 
-    </div>
-  </div>
-</div>
+  
+      </main>
 
 <?php
 get_footer();

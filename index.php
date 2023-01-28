@@ -20,8 +20,8 @@ get_header();
 //Another wordpress function. It pulls in banner-title, note the way the title is pulled in, you can learn more about this function in the wordpress docs.
 ?>
 
-<main>
-    <section>
+<!--<main>
+    <section>-->
       
     <?php
 
@@ -40,8 +40,8 @@ get_header();
 
 ?>
 
-    </section>
-</main>
+  <!-- </section>
+</main>-->
 
 <?
 get_footer();

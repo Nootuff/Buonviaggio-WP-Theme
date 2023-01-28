@@ -44,9 +44,37 @@ body,
 html {
   overflow-x: hidden;
 }
+
+main {
+ /* border: 1px solid red;*/
+  margin: auto;
+  width: 92%;
+}
+
+main article {
+ /* border: 1px solid blue;*/
+}
+
 p {
   color: #000;
   font-weight: 400;
+}
+
+.orange {
+  color: var(--color-orange);
+}
+
+.green {
+  color: var(--color-green);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+
+.width-80 {
+  width: 80%;
 }
 
 #top-navigation {
@@ -54,4 +82,73 @@ p {
   position: relative;
   top: -23px;
   height: 226px;
+}
+
+footer {
+  border: 1px solid var(--color-orange);
+}
+
+
+
+/*About page styles*/
+
+#about-page-container {
+}
+
+.about-page-top-section {
+  padding: 0;
+  display: block;
+  border: 2px solid blue;
+}
+
+.about-page-top-section div {
+  /* border: 1px solid blue;*/
+}
+
+.top-section-column {
+  padding: 0;
+}
+
+.top-section-column div {
+  /*border: 1px solid red;*/
+}
+
+.top-section-column img {
+  display: block;
+  margin: auto;
+}
+
+.subsection-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subsection-links p {
+  border: 5px solid var(--color-green);
+  background-color: var(--color-cream);
+  width: 45%;
+  text-align: center;
+}
+
+.subsection-links p a {
+  color: var(--color-green);
+  text-decoration: none;
+}
+
+.about-img-column-text {
+  text-align: center;
+  border: 5px solid var(--color-green);
+  border-radius: -10px;
+}
+
+.laura-quote {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 1000px) {
+  .about-page-top-section {
+    border: 2px solid red;
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
 }
