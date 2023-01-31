@@ -44,20 +44,31 @@ body,
 html {
   overflow-x: hidden;
 }
+p {
+  color: #000;
+  font-weight: 400;
+}
 
 main {
- /* border: 1px solid red;*/
   margin: auto;
   width: 92%;
 }
 
-main article {
- /* border: 1px solid blue;*/
+#top-navigation {
+  background-color: var(--color-cream);
+  margin-top: -24px;
 }
 
-p {
-  color: #000;
-  font-weight: 400;
+/*Style classes*/
+
+.width-80 {
+  width: 80%;
+}
+
+.green-underline{
+border-bottom: 3px solid var(--color-green);
+width: fit-content;
+margin: auto;
 }
 
 .orange {
@@ -72,22 +83,133 @@ p {
   text-transform: uppercase;
 }
 
-
-.width-80 {
-  width: 80%;
+.button-link{
+  border: 5px solid var(--color-green);
+  background-color:  var(--color-cream);
+  width: fit-content;
+  padding: 10px 18px;
+  color: var(--color-green);
+  text-transform: uppercase;
 }
 
-#top-navigation {
-  background-color: var(--color-cream);
+.button-link a{
+text-decoration: none;
+cursor: pointer;
+color: var(--color-green);
+}
+
+/*Style classes end*/
+
+/*Homepage styles*/
+
+#homepage-container {
+  border: 1px solid red;
+  /*background-image: url("images/pasta-dish.png");*/
+  background-position: center top;
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  height: 2000px;
   position: relative;
-  top: -23px;
-  height: 226px;
+ /* z-index: -100;*/
 }
 
-footer {
-  border: 1px solid var(--color-orange);
+.homepage-subheading {
+  border: 15px solid var(--color-orange);
+  text-align: center;
+  padding: 15px 30px;
+  background-color: white;
+  width: fit-content;
+  margin: auto;
 }
 
+.homepage-central-column {
+  border: 10px solid var(--color-orange);
+  width: 20%;
+  margin: 0;
+  height: 1000px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 500px;
+  display: none;
+ /* z-index: -1;*/
+} 
+
+.homepage-subheading p {
+
+  margin: 0;
+}
+
+.homepage-content {
+width: 90%;
+margin: auto;
+}
+
+.homepage-nav{
+ margin-top: 280px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.homepage-nav p{
+  /*border: 5px solid var(--color-green);*/
+  background-color: var(--color-cream);
+}
+
+.homepage-about-section{
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  z-index: 999;
+}
+
+.homepage-about-section div{
+  padding: 0;
+}
+
+
+
+.homepage-about-section div img{
+width: 90%;
+display: block;
+margin: auto;
+}
+
+.about-central{
+  padding: 30px !important;
+  text-align: center;
+}
+
+.about-central-discover{
+margin: auto;
+}
+
+.homepage-menu-section{
+  margin-top: 200px;
+  border: 1px solid red;
+}
+
+.homepage-menu-section-row {
+  border: 1px solid blue;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.homepage-menu-section-badges{
+display: flex;
+}
+
+.homepage-menu-section p{
+  border: 5px solid var(--color-green);
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 15px 0;
+}
+
+/*Homepage styles end*/
 
 
 /*About page styles*/
@@ -98,7 +220,6 @@ footer {
 .about-page-top-section {
   padding: 0;
   display: block;
-  border: 2px solid blue;
 }
 
 .about-page-top-section div {
@@ -146,9 +267,23 @@ footer {
 }
 
 @media only screen and (min-width: 1000px) {
+  /*About page styles*/
   .about-page-top-section {
-    border: 2px solid red;
     display: grid;
     grid-template-columns: 60% 40%;
   }
+
+  /*Homepage styles*/
+
+  .homepage-central-column {
+    margin: auto;
+    width: 40%;
+  }
+
+
+  .homepage-menu-section-row{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  
 }
