@@ -60,5 +60,10 @@ if ( ! function_exists( 'buonviaggio_setup' ) ) :
 		 */
 	//	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'quote', 'image', 'video' ) );
 	}
+
+	//This code prevents wordpress adding random paragraphs.
+	remove_filter( 'the_content', 'wpautop' );
+	remove_filter( 'the_excerpt', 'wpautop' );
+
 endif; // myfirsttheme_setup
 add_action( 'after_setup_theme', 'buonviaggio_setup' );
