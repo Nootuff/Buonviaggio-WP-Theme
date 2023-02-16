@@ -380,6 +380,15 @@ border: 1px solid red;
 
 /*Services and products styles end*/
 
+/*Footer area styles begin*/
+
+footer{
+  background-color: var(--color-cream);
+}
+
+
+/*Footer area styles end*/
+
 
 @media only screen and (min-width: 1000px) {
 

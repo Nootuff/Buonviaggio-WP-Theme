@@ -73,9 +73,8 @@ endif; // myfirsttheme_setup
 add_action('after_setup_theme', 'buonviaggio_setup'); /* after_setup_theme is called when each page is loaded 
   after theme is initialised, it is a wp function */
 
-function buonviaggioWidgetsAreas() //HEre is how to register a widget area. 
-{
-
+function buonviaggioWidgetsAreas()
+{ //Here is how to register a widget area. 
 	register_sidebar(
 		array(
 			/*'id' => 'new-widget-area',
@@ -85,85 +84,109 @@ function buonviaggioWidgetsAreas() //HEre is how to register a widget area.
 			'after_widget' => '</div>',
 			'before_title' => '<div class="widget-title-holder"><h3 class="widget-title">',
 			'after_title' => '</h3></div>' */
-			'before_widget' => '<section class="footer-area footer-area-one">',
-			'after_widget' => '</section>',
+			'before_widget' => '<div  id="%1$s" class="widget %2$s footer-area footer-area-one">',
+			'after_widget' => '</div>',
 			'before_title' => '<h4>',
 			'after_title' => '</h4>',
-			'id' => 'footer_widget_area',
+			'id' => 'footer_widget_area_one',
 			'name' => 'Footer widget area',
-			'description' => 'Place footer stuff here'
-
+			'description' => esc_html__('New footer widget area made for Buonviaggio website footer', 'Buonviaggio')
 		)
 	);
 
-}
+	register_sidebar( array(
+		'name'          => 'Footer area four',
+		'id'            => 'footer_area_four',
+		'description'   => 'This widget area discription',
+		'before_widget' => '<section  id="%1$s" class="widget %2$s footer-area footer-area-three">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+	  ));
 
+	/*register_sidebar(array(
+	'before_widget' => '<div  id="%1$s" class="widget %2$s footer-area footer-area-two">',
+	'after_widget' => '</div>',
+	'before_title' => '<h4>',
+	'after_title' => '</h4>',
+	'id' => 'footer_widget_area_two',
+	'name' => 'Footer widget area',
+	'description' => esc_html__( 'Second widget area', 'Buonviaggio' )
+	)
+	);*/
+}
 
 add_action('widgets_init', 'buonviaggioWidgetsAreas'); //widgets_init is a wp function
 
 
 // Creating a new widget
-class wpb_widget extends WP_Widget {
- 
-	function __construct() {
-	parent::__construct(
-	 
-	// Base ID of your widget
-	'wpb_widget', 
-	 
-	// Widget name will appear in UI
-	__('WPBeginner Widget', 'wpb_widget_domain'), 
-	 
-	// Widget description
-	array( 'description' => __( 'Sample widget based on WPBeginner Tutorial', 'wpb_widget_domain' ), )
-	);
-	}
-	 
-	// Creating widget front-end
-	 
-	public function widget( $args, $instance ) {
-	$title = apply_filters( 'widget_title', $instance['title'] );
-	 
-	// before and after widget arguments are defined by themes
-	echo $args['before_widget'];
-	if ( ! empty( $title ) )
-	echo $args['before_title'] . $title . $args['after_title'];
-	 
-	// This is where you run the code and display the output
-	echo __( 'Testing testing', 'wpb_widget_domain' );
-	echo $args['after_widget'];
-	}
-	 
-	// Widget Backend
-	public function form( $instance ) {
-	if ( isset( $instance[ 'title' ] ) ) {
-	$title = $instance[ 'title' ];
-	}
-	else {
-	$title = __( 'New title', 'wpb_widget_domain' );
-	}
-	// Widget admin form
-	?>
-	<p>
-	<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
-	<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-	</p>
-	<?php
-	}
-	 
-	// Updating widget replacing old instances with new
-	public function update( $new_instance, $old_instance ) {
-	$instance = array();
-	$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-	return $instance;
-	}
-	 
-	// Class wpb_widget ends here
-	} 
-	 
-	// Register and load the widget
-	function wpb_load_widget() {
-		register_widget( 'wpb_widget' );
-	}
-	add_action( 'widgets_init', 'wpb_load_widget' );
+class wpb_widget extends WP_Widget
+{
 
+	function __construct()
+	{
+		parent::__construct(
+
+			// Base ID of your widget
+			'wpb_widget',
+
+			// Widget name will appear in UI
+			__('WPBeginner Widget', 'wpb_widget_domain'),
+
+			// Widget description
+			array('description' => __('Sample widget based on WPBeginner Tutorial', 'wpb_widget_domain'),
+			)
+		);
+	}
+
+	// Creating widget front-end
+
+	public function widget($args, $instance)
+	{
+		$title = apply_filters('widget_title', $instance['title']);
+
+		// before and after widget arguments are defined by themes
+		echo $args['before_widget'];
+		if (!empty($title))
+			echo $args['before_title'] . $title . $args['after_title'];
+
+		// This is where you run the code and display the output
+		echo __('Testing testing', 'wpb_widget_domain');
+		echo $args['after_widget'];
+	}
+
+	// Widget Backend
+	public function form($instance)
+	{
+		if (isset($instance['title'])) {
+			$title = $instance['title'];
+		} else {
+			$title = __('New title', 'wpb_widget_domain');
+		}
+		// Widget admin form
+		?>
+		<p>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>"
+				name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
+		</p>
+		<?php
+	}
+
+	// Updating widget replacing old instances with new
+	public function update($new_instance, $old_instance)
+	{
+		$instance = array();
+		$instance['title'] = (!empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
+		return $instance;
+	}
+
+// Class wpb_widget ends here
+}
+
+// Register and load the widget
+function wpb_load_widget()
+{
+	register_widget('wpb_widget');
+}
+add_action('widgets_init', 'wpb_load_widget');
