@@ -77,43 +77,29 @@ function buonviaggioWidgetsAreas()
 { //Here is how to register a widget area. 
 	register_sidebar(
 		array(
-			/*'id' => 'new-widget-area',
-			'name' => esc_html__('My new widget area', 'theme-domain'),
-			'description' => esc_html__('A new widget area made for testing purposes', 'theme-domain'),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<div class="widget-title-holder"><h3 class="widget-title">',
-			'after_title' => '</h3></div>' */
+			
 			'before_widget' => '<div  id="%1$s" class="widget %2$s footer-area footer-area-one">',
 			'after_widget' => '</div>',
 			'before_title' => '<h4>',
 			'after_title' => '</h4>',
 			'id' => 'footer_widget_area_one',
-			'name' => 'Footer widget area',
+			'name' => 'Footer widget area one',
 			'description' => esc_html__('New footer widget area made for Buonviaggio website footer', 'Buonviaggio')
 		)
 	);
 
 	register_sidebar( array(
-		'name'          => 'Footer area four',
-		'id'            => 'footer_area_four',
+		'name'          => 'Footer widget area Two',
+		'id'            => 'footer_widget_area_two',
 		'description'   => 'This widget area discription',
-		'before_widget' => '<section  id="%1$s" class="widget %2$s footer-area footer-area-three">',
+		'before_widget' => '<section  id="%1$s" class="widget %2$s footer-area footer-area-two">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h4>',
 		'after_title'   => '</h4>',
 	  ));
 
-	/*register_sidebar(array(
-	'before_widget' => '<div  id="%1$s" class="widget %2$s footer-area footer-area-two">',
-	'after_widget' => '</div>',
-	'before_title' => '<h4>',
-	'after_title' => '</h4>',
-	'id' => 'footer_widget_area_two',
-	'name' => 'Footer widget area',
-	'description' => esc_html__( 'Second widget area', 'Buonviaggio' )
-	)
-	);*/
+	  
+
 }
 
 add_action('widgets_init', 'buonviaggioWidgetsAreas'); //widgets_init is a wp function
