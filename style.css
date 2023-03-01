@@ -379,34 +379,35 @@ main {
 /*Footer area styles begin*/
 
 footer {
-  background-color: var(--color-cream);
-  display: flex;
-  padding: 0 50px;
+  background-color: var(--color-dark);
+
   /*flex-flow: column wrap;
-  
-  align-content: flex-end;*/
-  justify-content: space-between;
+
+        align-content: flex-end;*/
 }
 
-#footer-column-one {
-  display: block;
-}
-
-#footer-column-two {
-  display: block;
-}
-
-.footer-area {
+#footer-container {
   border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+  padding: 10px 5px;
+  /*padding: 0 50px;*/
 }
 
-.footer-area-one {
-  border: 1px solid blue;
-  display: block;
+.footer-column div {
+  margin: 10px;
+  color: white;
+  /*border: 1px solid red;*/
 }
 
-.footer-area-two {
-  border: 1px solid green;
+.footer-column div p{
+  color: white;
+}
+
+.footer-column:last-of-type {
+  margin-left: auto;
 }
 
 /*Footer area styles end*/

@@ -77,29 +77,48 @@ function buonviaggioWidgetsAreas()
 { //Here is how to register a widget area. 
 	register_sidebar(
 		array(
-			
-			'before_widget' => '<div  id="%1$s" class="widget %2$s footer-area footer-area-one">',
+			'before_widget' => '<div id="%1$s" class="widget %2$s footer-column-one">',
 			'after_widget' => '</div>',
 			'before_title' => '<h4>',
 			'after_title' => '</h4>',
-			'id' => 'footer_widget_area_one',
-			'name' => 'Footer widget area one',
+			'id' => 'footer_widget_column_one',
+			'name' => 'Footer column one',
 			'description' => esc_html__('New footer widget area made for Buonviaggio website footer', 'Buonviaggio')
 		)
 	);
-
-	register_sidebar( array(
-		'name'          => 'Footer widget area Two',
-		'id'            => 'footer_widget_area_two',
-		'description'   => 'This widget area discription',
-		'before_widget' => '<section  id="%1$s" class="widget %2$s footer-area footer-area-two">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h4>',
-		'after_title'   => '</h4>',
-	  ));
-
-	  
-
+	register_sidebar(
+		array(
+			'name' => 'Footer column Two',
+			'id' => 'footer_widget_column_two',
+			'description' => 'This widget area discription',
+			'before_widget' => '<div id="%1$s" class="widget %2$s footer-column-two">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4>',
+			'after_title' => '</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => 'Footer column Three',
+			'id' => 'footer_widget_column_three',
+			'description' => 'This widget area discription',
+			'before_widget' => '<div id="%1$s" class="widget %2$s footer-column-three">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4>',
+			'after_title' => '</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => 'Footer column Four',
+			'id' => 'footer_widget_column_four',
+			'description' => 'This widget area discription',
+			'before_widget' => '<div id="%1$s" class="widget %2$s footer-column-four">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4>',
+			'after_title' => '</h4>',
+		)
+	);
 }
 
 add_action('widgets_init', 'buonviaggioWidgetsAreas'); //widgets_init is a wp function
@@ -120,7 +139,8 @@ class wpb_widget extends WP_Widget
 			__('WPBeginner Widget', 'wpb_widget_domain'),
 
 			// Widget description
-			array('description' => __('Sample widget based on WPBeginner Tutorial', 'wpb_widget_domain'),
+			array(
+				'description' => __('Sample widget based on WPBeginner Tutorial', 'wpb_widget_domain'),
 			)
 		);
 	}
