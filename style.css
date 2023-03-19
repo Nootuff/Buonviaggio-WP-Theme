@@ -386,13 +386,15 @@ footer {
         align-content: flex-end;*/
 }
 
-#footer-container {
-  border: 1px solid red;
+
+#footer-column-container {
+  /*border: 1px solid red;*/
   display: flex;
   flex-direction: row;
   width: 90%;
   margin: auto;
   padding: 10px 5px;
+
   /*padding: 0 50px;*/
 }
 
@@ -408,6 +410,31 @@ footer {
 
 .footer-column:last-of-type {
   margin-left: auto;
+}
+
+#footer-bottom {
+  border-top: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+}
+
+
+ 
+
+.footer-bottom-right-column{
+  margin-left: auto !important;
+}
+
+#footer-bottom div {
+  margin: 10px;
+  color: white;
+  /*border: 1px solid red;*/
+}
+
+#footer-bottom div p{
+  color: white;
 }
 
 /*Footer area styles end*/

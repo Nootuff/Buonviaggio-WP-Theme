@@ -119,6 +119,43 @@ function buonviaggioWidgetsAreas()
 			'after_title' => '</h4>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name' => __('Footer bottom left'),
+			'id' => 'footer_bottom_left',
+			'description' => __('Appears on the static front page template', 'wpb'),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		));
+
+		
+	register_sidebar(
+		array(
+			'name' => 'Footer bottom centre',
+			'id' => 'footer_bottom_centre',
+			'description' => 'This widget area discription',
+			'before_widget' => '<div id="%1$s" class="widget %2$s wolf">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4>',
+			'after_title' => '</h4>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name' => __('Footer bottom right'),
+			'id' => 'footer_bottom_right',
+			'description' => 'This widget area discription',
+			'before_widget' => '<div id="%1$s" class="widget %2$s work">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4>',
+			'after_title' => '</h4>',
+		)
+	);
+
 }
 
 add_action('widgets_init', 'buonviaggioWidgetsAreas'); //widgets_init is a wp function
