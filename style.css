@@ -386,7 +386,6 @@ footer {
         align-content: flex-end;*/
 }
 
-
 #footer-column-container {
   /*border: 1px solid red;*/
   display: flex;
@@ -404,7 +403,7 @@ footer {
   /*border: 1px solid red;*/
 }
 
-.footer-column div p{
+.footer-column div p {
   color: white;
 }
 
@@ -412,28 +411,26 @@ footer {
   margin-left: auto;
 }
 
-#footer-bottom {
+.footer-divider {
   border-top: 1px solid white;
-  display: flex;
-  flex-direction: row;
   width: 90%;
   margin: auto;
 }
 
-
- 
-
-.footer-bottom-right-column{
-  margin-left: auto !important;
+#footer-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  width: 90%;
+  margin: auto;
 }
 
 #footer-bottom div {
   margin: 10px;
   color: white;
-  /*border: 1px solid red;*/
 }
 
-#footer-bottom div p{
+#footer-bottom div p {
   color: white;
 }
 
